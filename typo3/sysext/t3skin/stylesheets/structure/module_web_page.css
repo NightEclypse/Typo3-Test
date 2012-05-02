@@ -1,0 +1,90 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Web > Page
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+td.t3-page-column {
+	min-width: 150px;
+	max-width: 300px;
+}
+
+.t3-page-colHeader {
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+}
+
+.t3-page-colHeader a {
+	position: relative;
+}
+
+.t3-page-colHeader-icons {
+	position: absolute;
+	left: 4px;
+}
+
+.t3-page-ce {
+	margin-bottom: 10px;
+}
+
+.t3-page-ce h4 {
+	margin: 0;
+}
+
+.t3-page-ce .t3-row-header {
+	visibility: hidden;
+}
+
+.t3-page-ce.active .t3-row-header {
+	visibility: visible;
+}
+
+.t3-page-ce-icons-move {
+	float: right;
+}
+
+.t3-page-ce .t3-row-header .t3-icon,
+.t3-page-colHeader .t3-icon {
+	margin-top: -1px;
+}
+
+.t3-page-ce-icons-move span {
+	float: left;
+}
+
+.t3-page-ce-body {
+	padding: 7px;
+}
+
+.t3-page-ce-type {
+	margin-bottom: 5px;
+}
+
+.t3-page-ce-type a {
+	vertical-align: text-bottom;
+}
+
+table.typo3-page-columnsMode img.c-divider {
+	margin: 10px 0px 5px 0px;
+}
+
+table.typo3-page-stdlist {
+	margin-top: 10px;
+}
+
+table.typo3-page-stdlist tr td.c-headLine {
+	height: 24px;
+}
+
+table.typo3-page-stdlist tr.c-table-row-spacer td {
+	display: none;
+}
+
+table.typo3-page-stdlist tr td div.typo3-DBctrl {
+	padding: 2px;
+}
+
+td.t3-gridCell div.t3-page-ce {
+	padding: 1px 5px 5px 5px;
+}

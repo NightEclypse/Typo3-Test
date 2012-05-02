@@ -1,0 +1,91 @@
+This document is a part of the TYPO3 project. TYPO3 is an open source web
+content management system released under the GNU GPL. TYPO3 is copyright
+(c) 1999-2012 by Kasper Skaarhoj.
+
+This document contains information about TYPO3 version 4.7 which has been
+released on April, 24th 2012.
+
+An up-to-date version of this document also containing links to further in
+depth information can be found here:
+
+http://wiki.typo3.org/TYPO3_4.7
+
+===============================================================================
+Compatibility
+===============================================================================
+
+* PHP 5.3
+
+This version requires at least PHP 5.3, older versions of PHP are not supported
+anymore with TYPO3 4.7.
+
+	* safe_mode is not supported anymore
+	* magic_quotes_gpc is deprecated. You are encouraged to turn this option
+	  off as it still defaults to "On".
+
+* ImageMagick
+
+If you are using ImageMagick, only versions 6.0 and above are supported.
+
+* Deprecated methods
+
+Deprecated methods that were initially targeted to be removed in TYPO3 4.7 have
+finally been removed. The deprecation log shows which functions were declared
+to be deprecated and will be removed in the next TYPO3 versions.
+
+
+Removed Functionality / Overworked Functionality
+-------------------------------------------------------------------------------
+
+* non utf-8 support removed
+
+Before upgrading, check that your database is encoded in utf-8 and your
+database connection is encoded same way. TYPO3 4.7 only will work with utf-8 after
+other charsets have been deprecated in TYPO3 version 4.5 LTS.
+
+* The old HTML-Mailer Class (t3lib_htmlmail) has been removed
+
+After a grace period of two version t3lib_htmlmail finally has been removed from
+TYPO3 Core. All extensions which had not been adapted yet, will break. Most 
+likely this will affect many extensions.
+
+* Highly changed CSS Styled Content Classes
+
+The System Extensions CSS Styled Content and the content rendering within sysext 
+CMS have been heavily overworked as well as the TypoScript changed remarkibly.
+We expect all extensions X-Classing the Content-Rendering as well as adapting 
+TypoScript of CSS Styled Content to break. This might affect Lightbox-Extensions
+as well as for example dam_content (old version).
+
+!!!       PLEASE SEE A LIST OF INCOMPATIBLE EXTENSIONS WITHIN THE WIKI       !!!
+
+===============================================================================
+Changes and Improvements
+===============================================================================
+
+This will list important changes and improvements between TYPO3 4.6 and 4.7. For
+technical details see ChangeLog included in the typo3_src package.
+
+
+Authentication Services
+-------------------------------------------------------------------------------
+
+With this version the authentication chain has been cleaned up so that third
+party authentication services can benefit from RSA encrypted login without the
+need of decrypting the submitted password in their own code.
+
+The system extension rsaauth will now decrypt the password and provide the
+decrypted version for other services. So external authentication services can
+access the clear text password always through $this->loginData['uident_text'],
+no matter if the password has been transmitted as plain text during the login
+or rsaauth has decrypted it.
+
+Due to major changes in the login service of rsaauth, all extensions which
+use XCLASS to extend that class, most likely will fail, whereas other extension
+which make proper use of the public API of the system extension rsaauth will
+continue working without any problem.
+In any case, it is recommended to adjust external authentication services to
+benefit from the changes.
+
+See new chapter in TYPO3 services documentation (doc_core_services) about the
+topic of authentication services: http://forge.typo3.org/issues/31413

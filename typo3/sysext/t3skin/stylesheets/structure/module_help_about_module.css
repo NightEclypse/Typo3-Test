@@ -1,0 +1,45 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Help > About modules (alt_intro.php)
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+div.typo3-alt-intro-php {
+	height: 100%;
+	overflow: auto;
+}
+
+#typo3-alt-intro-php-sub {
+	margin: 30px 20px;
+	width: 600px;
+}
+
+#typo3-alt-intro-php-sub p a img {
+	margin-right: 8px;
+	margin-bottom: 2px;
+}
+
+table#typo3-about-modules tr td {
+	padding: 2px 2px 2px 2px;
+	vertical-align: top;
+}
+
+table#typo3-about-modules tr.c-mainitem td {
+	padding-top: 14px;
+}
+
+table#typo3-about-modules tr.c-mainitem:first-child td {
+	padding-top: 0;
+}
+
+table#typo3-about-modules tr.c-mainitem td img {
+	padding: 0px 2px 2px 4px;
+	vertical-align: middle;
+}
+
+table#typo3-about-modules tr.c-subitem-row td:first-child {
+	padding-left: 23px;
+}
+
+table#typo3-about-modules tr.c-subitem-row td.module-description {
+	padding-right: 10px;
+}

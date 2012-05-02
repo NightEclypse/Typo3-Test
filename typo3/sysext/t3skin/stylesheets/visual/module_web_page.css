@@ -1,0 +1,118 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Web > Page
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+.t3-page-langMode {
+	width: 100%;
+}
+
+.t3-page-columns {
+	width: 100%;
+}
+
+.t3-page-colHeader {
+	font-weight: bold;
+	text-align: left;
+	font-size: 11px;
+}
+
+.t3-page-colHeader-label {
+	text-align: center;
+}
+
+.t3-page-border {
+	background-color: #cfcfcf;
+	width: 1px;
+}
+
+.t3-page-ce-header {
+	background-color: #cacaca;
+}
+
+.t3-page-ce .t3-page-ce-body,
+.t3-page-ce.active .t3-page-ce-body {
+	background-color: #ffffff;
+	border: 1px solid #e2e2e2;
+	border-top: none;
+	font-size: 10px;
+}
+
+.t3-page-ce.active .t3-page-ce-body {
+	border-color: #5b5b5b;
+}
+
+.t3-page-ce-hidden .t3-page-ce-body,
+.t3-page-ce-hidden .t3-page-ce-body a {
+	color: #bbbbbb;
+}
+
+.t3-page-ce-hidden.active .t3-page-ce-body,
+.t3-page-ce-hidden.active .t3-page-ce-body a {
+	color: #000000;
+}
+
+.t3-page-ce-hidden .t3-page-ce-body {
+	background-color: transparent;
+	border-style: none dotted dotted;
+}
+
+.t3-page-ce-hidden .t3-page-ce-body .t3-icon ,
+.t3-page-ce-hidden .t3-page-ce-body img {
+	opacity: 0.4;
+}
+
+.t3-page-ce.active .t3-page-ce-body {
+	background-color: #ffffff;
+}
+
+.t3-page-ce.active .t3-page-ce-body .t3-icon ,
+.t3-page-ce.active .t3-page-ce-body img {
+	opacity: inherit;
+}
+
+.t3-page-ce-hidden .t3-page-ce-header {
+	background-color: #e5e5e5;
+}
+
+table.typo3-page-columnsMode tr td a {
+	text-decoration: none;
+}
+
+table.typo3-page-columnsMode tr td a b {
+	text-decoration: underline;
+}
+
+table.t3-page-columns tr td span.exampleContent a {
+	text-decoration: none;
+}
+
+table#typo3-page-stdlist tr td.c-headLine {
+	background-color: #d7dbe2;
+}
+
+table.typo3-page-buttons td {
+	padding-right: 10px;
+}
+
+td.t3-gridCell-restricted {
+	background-color: #e8e0e0;
+}
+
+td.t3-gridCell-unassigned {
+	background-color: #e5e5e5;
+}
+
+td.t3-gridCell-restricted div.t3-row-header,
+td.t3-gridCell-unassigned div.t3-row-header {
+	-moz-opacity: 0.4;
+	opacity: .40;
+	filter: alpha(opacity = 40);
+}
+
+td.t3-gridCell-restricted div.t3-row-header div,
+td.t3-gridCell-unassigned div.t3-row-header div {
+	-moz-opacity: 0.6;
+	opacity: .60;
+	filter: alpha(opacity = 60);
+}
